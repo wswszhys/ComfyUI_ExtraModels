@@ -1,3 +1,7 @@
+from sageattention import sageattn
+import torch.nn.functional as F
+
+F.scaled_dot_product_attention = sageattn
 # only import if running as a custom node
 try:
 	import comfy.utils
